@@ -1,0 +1,31 @@
+.taskForm > button {
+	width: 60px;
+	outline: none;
+}
+
+.listControl > button {
+	border: 1px solid black;
+	padding: 5px 15px;
+	border-radius: 5px;
+	box-shadow: none;
+	outline: none;
+}
+
+.singleTaskControl > button {
+	padding: 1.5px 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: none;
+	outline: none;
+}
+
+.taskForm > button,
+.listControl > button,
+.singleTaskControl > button:hover {
+	cursor: pointer;
+}
+ul {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
