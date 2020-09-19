@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./App.css";
 import Todos from "./components/Todos";
+import FilterButton from "./components/FilterButton";
 
 function App() {
 	//useState hook init
@@ -9,6 +10,8 @@ function App() {
 		{ id: 1, task: "Sleep", isChecked: false },
 		{ id: 2, task: "Repeat", isChecked: false },
 	]);
+	const [filter, setFilter] = useState("All");
+	const [newName, setNewName] = useState("");
 
 	//useRef init
 	const newTask = useRef();
@@ -23,7 +26,6 @@ function App() {
 		}
 		newTask.current.value = null;
 	};
-	const editTodo = (e) => {};
 
 	function deleteTodo(id) {
 		const newTodo = [...todos].filter((todo) => todo.id !== id);
@@ -36,33 +38,56 @@ function App() {
 		setTodos([...todos]);
 	}
 
-	console.log(todos);
+	const editTodo = (id, newTask) => {
+		const editedTask = [...todos].find((todo) => todo.id === id);
+		editedTask.task = newTask;
+		setNewName(editedTask);
+	};
+
+	const FILTER_MAP = {
+		All: () => true,
+		Active: (task) => !task.isChecked,
+		Completed: (task) => task.isChecked,
+	};
+
+	const FILTER_NAMES = Object.keys(FILTER_MAP);
+	const filterList = FILTER_NAMES.map((name) => (
+		<FilterButton
+			key={name}
+			name={name}
+			isPressed={name === filter}
+			setFilter={setFilter}
+		/>
+	));
+
+	const taskList = todos
+		.filter((task) => FILTER_MAP[filter](task))
+		.map((todo) => (
+			<Todos
+				key={todo.id}
+				todo={todo}
+				editTodo={editTodo}
+				deleteTodo={deleteTodo}
+				isComplete={isComplete}
+			/>
+		));
+
 	const remainTasks = todos.filter((todo) => !todo.isChecked).length;
 	return (
 		<div className="App">
-			<h1>Todo List</h1>
-			<h3>What needs to be done ? </h3>
+			<br />
+			<h2>What needs to be done ? </h2>
 			<div className="taskForm" autoComplete="off">
 				<input placeholder="Enter your task" ref={newTask} type="text"></input>
 				&nbsp;
 				<button onClick={addTodo}>Add</button>
 			</div>
 			<br />
-			<div className="listControl">
-				<button>Show all tasks</button>
-				&nbsp;
-				<button>Show active tasks</button>
-				&nbsp;
-				<button>Show completed tasks</button>
+			<div className="listControl">{filterList}</div>
+			<div className="tasks_bdy">
+				<h1>{remainTasks} Tasks Remaining</h1>
+				{taskList}
 			</div>
-			<h2>{remainTasks} tasks remaining</h2>
-			<ul>
-				<Todos
-					todolist={todos}
-					deleteTodo={deleteTodo}
-					isComplete={isComplete}
-				/>
-			</ul>
 		</div>
 	);
 }
