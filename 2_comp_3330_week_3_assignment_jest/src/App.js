@@ -80,11 +80,13 @@ function App() {
 			<div className="taskForm" autoComplete="off">
 				<input placeholder="Enter your task" ref={newTask} type="text"></input>
 				&nbsp;
-				<button onClick={addTodo}>Add</button>
+				<button type="button" id="addTodoBtn" onClick={addTodo}>
+					Add
+				</button>
 			</div>
 			<br />
 			<div className="listControl">{filterList}</div>
-			<div className="tasks_bdy">
+			<div className="tasksBdy">
 				<h1>{remainTasks} Tasks Remaining</h1>
 				{taskList}
 			</div>

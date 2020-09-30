@@ -1,0 +1,144 @@
+body {
+	background-color: #000;
+	color: #fff;
+}
+
+.App {
+	margin: auto;
+	width: 80%;
+	text-align: center;
+}
+
+.taskForm {
+	display: flex;
+	flex-direction: column;
+}
+.taskForm > input {
+	background-color: #000;
+	color: #fff;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 30px;
+	width: 100%;
+	height: 50px;
+}
+
+.taskForm > button {
+	background-color: #000;
+	color: #fff;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 20px;
+	width: 100%;
+	outline: none;
+	border: 1px solid #fff;
+}
+
+.taskForm > button:hover {
+	background-color: green;
+	transition-duration: 0.5s;
+}
+
+.tasks_bdy {
+	margin: auto;
+	width: 80%;
+	text-align: left;
+}
+
+.listControl {
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.listControl > button {
+	background-color: #000;
+	color: #fff;
+	width: 30%;
+	font-size: 20px;
+	border: 1px solid #fff;
+	padding: 5px 30px;
+	border-radius: 5px;
+	box-shadow: none;
+	outline: none;
+}
+
+.listControl > button:hover {
+	background-color: gray;
+	transition-duration: 0.5s;
+}
+
+.task {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.taskSection {
+	display: flex;
+	align-items: center;
+}
+
+.taskSection > input {
+	width: 30px;
+	height: 30px;
+}
+
+.inputBox {
+	font-size: 25px;
+}
+
+.singleTaskControl {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.singleTaskControl > button {
+	font-size: 20px;
+	width: 49%;
+	padding: 10px 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: none;
+	outline: none;
+}
+
+.del_btn {
+	background-color: rgb(160, 28, 41);
+	color: #fff;
+}
+
+.edi_btn:hover {
+	opacity: 0.8;
+}
+.del_btn:hover {
+	opacity: 0.8;
+}
+
+.taskForm > button,
+.listControl > button,
+.singleTaskControl > button:hover {
+	cursor: pointer;
+}
+
+.newTaskInput {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.save_btn {
+	color: #fff;
+	background-color: green;
+}
+
+.cancel_btn:hover {
+	opacity: 0.8;
+}
+
+.save_btn:hover {
+	opacity: 0.8;
+}

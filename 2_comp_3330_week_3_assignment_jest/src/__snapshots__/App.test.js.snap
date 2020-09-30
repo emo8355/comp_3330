@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no items 1`] = `
+<div
+  className="App"
+>
+  <br />
+  <h2>
+    What needs to be done ? 
+  </h2>
+  <div
+    autoComplete="off"
+    className="taskForm"
+  >
+    <input
+      placeholder="Enter your task"
+      type="text"
+    />
+     
+    <button
+      id="addTodoBtn"
+      onClick={[Function]}
+      type="button"
+    >
+      Add
+    </button>
+  </div>
+  <br />
+  <div
+    className="listControl"
+  >
+    <button
+      aria-pressed={true}
+      className="toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        All
+      </span>
+    </button>
+    <button
+      aria-pressed={false}
+      className="toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Active
+      </span>
+    </button>
+    <button
+      aria-pressed={false}
+      className="toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Completed
+      </span>
+    </button>
+  </div>
+  <div
+    className="tasksBdy"
+  >
+    <h1>
+      2
+       Tasks Remaining
+    </h1>
+    <div
+      className="task"
+    >
+      <div
+        id="viewTemplate"
+      >
+        <div
+          className="taskSection"
+        >
+          <input
+            checked={true}
+            onChange={[Function]}
+            type="checkbox"
+          />
+            
+          <span
+            className="inputBox"
+          >
+            Eat
+          </span>
+        </div>
+        <div
+          className="singleTaskControl"
+        >
+          <button
+            className="ediBtn"
+            onClick={[Function]}
+          >
+            Edit 
+            Eat
+          </button>
+           
+          <button
+            className="delBtn"
+            onClick={[Function]}
+          >
+            Delete 
+            Eat
+          </button>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="task"
+    >
+      <div
+        id="viewTemplate"
+      >
+        <div
+          className="taskSection"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+            
+          <span
+            className="inputBox"
+          >
+            Sleep
+          </span>
+        </div>
+        <div
+          className="singleTaskControl"
+        >
+          <button
+            className="ediBtn"
+            onClick={[Function]}
+          >
+            Edit 
+            Sleep
+          </button>
+           
+          <button
+            className="delBtn"
+            onClick={[Function]}
+          >
+            Delete 
+            Sleep
+          </button>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="task"
+    >
+      <div
+        id="viewTemplate"
+      >
+        <div
+          className="taskSection"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+            
+          <span
+            className="inputBox"
+          >
+            Repeat
+          </span>
+        </div>
+        <div
+          className="singleTaskControl"
+        >
+          <button
+            className="ediBtn"
+            onClick={[Function]}
+          >
+            Edit 
+            Repeat
+          </button>
+           
+          <button
+            className="delBtn"
+            onClick={[Function]}
+          >
+            Delete 
+            Repeat
+          </button>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+`;
